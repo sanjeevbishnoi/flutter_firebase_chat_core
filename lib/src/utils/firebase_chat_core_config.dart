@@ -1,3 +1,4 @@
+import 'package:flutter_firebase_chat_core/src/utils/firebase_product_type.dart';
 import 'package:meta/meta.dart';
 
 /// Class that represents the chat config. Can be used for setting custom names
@@ -9,12 +10,15 @@ import 'package:meta/meta.dart';
 class FirebaseChatCoreConfig {
   const FirebaseChatCoreConfig(
     this.firebaseAppName,
+    this.firebaseProductType,
     this.roomsCollectionName,
     this.usersCollectionName,
   );
 
   /// Property to set custom firebase app name
   final String? firebaseAppName;
+  // Property to set firebase product type  realtime or firestore
+  final FirebaseProductType? firebaseProductType;
 
   /// Property to set rooms collection name
   final String roomsCollectionName;
